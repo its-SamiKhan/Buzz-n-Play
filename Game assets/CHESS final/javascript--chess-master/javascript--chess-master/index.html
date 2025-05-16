@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #board {
+            display: grid;
+            grid-template-rows: repeat(8, 80px);
+            gap: 0;
+            border: 2px solid black;
+            color: #7f1414;
+            background-image: url('https://images.unsplash.com/photo-1517942313987-e61b3c62ca32');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 640px; /* Ensure this is big enough to see the image */
+            width: 640px;
+
+        }
+
+        
+
+        #board > div {
+            display: grid;
+            grid-template-columns: repeat(8, 80px);
+            gap: 0;
+        }
+
+        button {
+            height: 80px;
+            width: 80px;
+            font-size: 60px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #333;
+            color: #000000;
+        }
+
+        button:nth-child(odd):nth-of-type(odd),
+        button:nth-child(even):nth-of-type(even) {
+            background-color: #f2f881; /* Yellow for dark squares */
+        }
+
+        button:nth-child(odd):nth-of-type(even),
+        button:nth-child(even):nth-of-type(odd) {
+            
+            color: #fffefe; /* Beige for light squares */
+        }
+    </style>
+</head>
+<body>
+    <div id="board"> 
+        <div id="row-0">
+            <button class="square" id="row-0-column-0">&#9820;</button>
+            <button class="square" id="row-0-column-1">&#9822;</button>
+            <button class="square" id="row-0-column-2">&#9821;</button>
+            <button class="square" id="row-0-column-3">&#9819;</button>
+            <button class="square" id="row-0-column-4">&#9818;</button>
+            <button class="square" id="row-0-column-5">&#9821;</button>
+            <button class="square" id="row-0-column-6">&#9822;</button>
+            <button class="square" id="row-0-column-7">&#9820;</button>
+        </div> 
+        <div id="row-1">
+            <button class="square" id="row-1-column-0">&#9823;</button>
+            <button class="square" id="row-1-column-1">&#9823;</button>
+            <button class="square" id="row-1-column-2">&#9823;</button>
+            <button class="square" id="row-1-column-3">&#9823;</button>
+            <button class="square" id="row-1-column-4">&#9823;</button>
+            <button class="square" id="row-1-column-5">&#9823;</button>
+            <button class="square" id="row-1-column-6">&#9823;</button>
+            <button class="square" id="row-1-column-7">&#9823;</button>
+        </div> 
+        <div id="row-2">
+            <button class="square" id="row-2-column-0">&nbsp;</button>
+            <button class="square" id="row-2-column-1">&nbsp;</button>
+            <button class="square" id="row-2-column-2">&nbsp;</button>
+            <button class="square" id="row-2-column-3">&nbsp;</button>
+            <button class="square" id="row-2-column-4">&nbsp;</button>
+            <button class="square" id="row-2-column-5">&nbsp;</button>
+            <button class="square" id="row-2-column-6">&nbsp;</button>
+            <button class="square" id="row-2-column-7">&nbsp;</button>
+        </div> 
+        <div id="row-3">
+            <button class="square" id="row-3-column-0">&nbsp;</button>
+            <button class="square" id="row-3-column-1">&nbsp;</button>
+            <button class="square" id="row-3-column-2">&nbsp;</button>
+            <button class="square" id="row-3-column-3">&nbsp;</button>
+            <button class="square" id="row-3-column-4">&nbsp;</button>
+            <button class="square" id="row-3-column-5">&nbsp;</button>
+            <button class="square" id="row-3-column-6">&nbsp;</button>
+            <button class="square" id="row-3-column-7">&nbsp;</button>
+        </div> 
+        <div id="row-4">
+            <button class="square" id="row-4-column-0">&nbsp;</button>
+            <button class="square" id="row-4-column-1">&nbsp;</button>
+            <button class="square" id="row-4-column-2">&nbsp;</button>
+            <button class="square" id="row-4-column-3">&nbsp;</button>
+            <button class="square" id="row-4-column-4">&nbsp;</button>
+            <button class="square" id="row-4-column-5">&nbsp;</button>
+            <button class="square" id="row-4-column-6">&nbsp;</button>
+            <button class="square" id="row-4-column-7">&nbsp;</button>
+        </div>
+        <div id="row-5">
+            <button class="square" id="row-5-column-0">&nbsp;</button>
+            <button class="square" id="row-5-column-1">&nbsp;</button>
+            <button class="square" id="row-5-column-2">&nbsp;</button>
+            <button class="square" id="row-5-column-3">&nbsp;</button>
+            <button class="square" id="row-5-column-4">&nbsp;</button>
+            <button class="square" id="row-5-column-5">&nbsp;</button>
+            <button class="square" id="row-5-column-6">&nbsp;</button>
+            <button class="square" id="row-5-column-7">&nbsp;</button>
+        </div> 
+        <div id="row-6">
+            <button class="square" id="row-6-column-0">&#9817;</button>
+            <button class="square" id="row-6-column-1">&#9817;</button>
+            <button class="square" id="row-6-column-2">&#9817;</button>
+            <button class="square" id="row-6-column-3">&#9817;</button>
+            <button class="square" id="row-6-column-4">&#9817;</button>
+            <button class="square" id="row-6-column-5">&#9817;</button>
+            <button class="square" id="row-6-column-6">&#9817;</button>
+            <button class="square" id="row-6-column-7">&#9817;</button>
+        </div> 
+        <div id="row-7">
+            <button class="square" id="row-7-column-0">&#9814;</button>
+            <button class="square" id="row-7-column-1">&#9816;</button>
+            <button class="square" id="row-7-column-2">&#9815;</button>
+            <button class="square" id="row-7-column-3">&#9813;</button>
+            <button class="square" id="row-7-column-4">&#9812;</button>
+            <button class="square" id="row-7-column-5">&#9815;</button>
+            <button class="square" id="row-7-column-6">&#9816;</button>
+            <button class="square" id="row-7-column-7">&#9814;</button>
+        </div>
+    </div>
+    <script src="JavaScript/Pieces/Piece.js"></script>
+    <script src="JavaScript/Pieces/Knight.js"></script>
+    <script src="JavaScript/Pieces/Rook.js"></script>
+    <script src="JavaScript/Pieces/Bishop.js"></script>
+    <script src="JavaScript/Pieces/Queen.js"></script>
+    <script src="JavaScript/Pieces/King.js"></script>
+    <script src="JavaScript/Pieces/Pawn.js"></script>
+    <script src="JavaScript/UtilityFunctions.js"></script>
+    <script src="JavaScript/Player.js"></script>
+    <script src="JavaScript/Board.js"></script>
+    <script src="JavaScript/UserInterface.js"></script>
+    <script src="JavaScript/Game.js"></script>
+</body>
+</html>

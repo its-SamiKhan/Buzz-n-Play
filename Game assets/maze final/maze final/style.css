@@ -1,0 +1,164 @@
+body.bee-maze-game {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://img.freepik.com/free-vector/decorative-honey-food-jar-hive-bumble-bee-dipper-with-honeycomb-seamless-pattern-vector-illustration_98292-3654.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.maze-container {
+    display: grid;
+    gap: 1px;
+    background-color: #b63535;
+    border: 2px solid #d47878;
+    box-shadow: 0 0 10px rgba(207, 92, 92, 0.1);
+}
+
+.maze-cell {
+    width: 25px; /* Adjusted size */
+    height: 25px; /* Adjusted size */
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+}
+
+.maze-cell.wall {
+    background-color: #ee7676;
+}
+
+
+.maze-cell.path {
+    background-color: #ffff00;
+}
+
+.generate-btn, .solve-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.completion-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.generate-btn:hover, .solve-btn:hover {
+    background-color: #45a049;
+}
+
+.move-instructions {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.maze-container {
+    display: grid;
+    gap: 1px;
+    background-color: #333;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.maze-cell {
+    width: 25px; /* Adjusted size */
+    height: 25px; /* Adjusted size */
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+}
+
+.maze-cell.wall {
+    background-color: #397928;
+}
+
+.maze-cell.start {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/016/390/766/small/element-green-tree-cartoon-png.png'); /* Bee icon */
+    background-size: cover;
+}
+
+.maze-cell.end {
+    background-image: url('https://img.lovepik.com/png/20231018/Honeycomb-beehive-hanging-from-a-branch-clipart-fly-flying_245296_wh860.png'); /* Honeycomb icon */
+    background-size: cover;
+}
+
+.maze-cell.player {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJJWtMLbrGmSK3PL3rRoWGybetXopOhSJduw&s'); /* Bee icon */
+    background-size: cover;
+}
+
+.maze-cell.path {
+    background-color: #ffff00;
+}
+
+.generate-btn, .solve-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.completion-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.generate-btn:hover, .solve-btn:hover {
+    background-color: #45a049;
+}
+
+.move-instructions {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}

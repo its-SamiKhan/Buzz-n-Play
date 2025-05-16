@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="tictac.js"/>
+<style>
+
+
+BODY{
+	background-image: url('vortex.jpg');
+    background-size: cover; /* Resize the background image */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent repetition */
+}
+
+table,td,th
+{
+border:1px solid orange;
+margin-left: 430px;
+margin-top: 50px;
+height: 80px;
+}
+table
+{
+width:40%;
+}
+td 
+{
+	background-color: black;
+	color: red;
+	height: 120px;
+	font-family:Verdana;
+	font-size: 300%;
+	text-align: center;
+}
+
+h1{
+
+	text-align: center;
+	vertical-align: middle;
+	color: red;
+	position: relative;
+	font-size: 200%;
+}
+button{
+	margin-left: 660px;
+	margin-top: 50px;
+	width: 150px;
+	height: 35px;
+	font-size: 120%;
+}
+
+div.terms{
+    display:block;
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100%;
+    font-size: 120%;
+    font-family: sans-serif;
+}
+
+div.terms a{
+	text-decoration: none;
+	color: white;
+
+}
+
+div.terms a:hover{
+	color:blue;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<script src="tictac.js"></script>
+
+
+<h1 id= "h1"> Multi-player</h1>
+
+
+
+<table>
+<tr>
+<td id="square1" style= "width: 50px" onclick="clicker('square1')"></td>
+<td id="square2" style= "width: 50px"onclick="clicker('square2')"></td>
+<td id="square3" style= "width: 50px"onclick="clicker('square3')"></td>
+</tr>
+<tr>
+<td id="square4"style= "width: 50px" onclick="clicker('square4')"></td>
+<td id="square5" style= "width: 50px"onclick="clicker('square5')"></td>
+<td id="square6" style= "width: 50px"onclick="clicker('square6')"></td>
+</tr>
+<tr>
+<td id="square7"style= "width: 50px" onclick="clicker('square7')"></td>
+<td id="square8" style= "width: 50px"onclick="clicker('square8')"></td>
+<td id="square9" style= "width: 50px"onclick="clicker('square9')"></td>
+</tr></table>
+
+<button id="button" onclick="restart()">Reset!</button>
+
+
+</body>
+</html>
