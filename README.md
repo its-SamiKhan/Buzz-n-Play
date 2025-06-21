@@ -58,12 +58,12 @@ You just need a modern web browser.
 
 ```
 .
+├── Image assets/     # Contains all the gifs for the main page
 ├── Game assets/      # Contains the individual game projects
 │   ├── 2048 Final/
 │   ├── Bee Facts Site/
 │   ├── CHESS final/
 │   ├── ... (and so on for each game)
-├── *.gif             # Gifs for the main page
 ├── *.cur             # Custom bee-themed cursors
 ├── index.html        # The main entry point and game hub
 ├── style.css         # Styles for the main page layout
